@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for you, my love</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #ffeaf4, #fcddec);
+      font-family: 'Quicksand', sans-serif;
+      text-align: center;
+      color: #772244;
+      padding: 50px 20px;
+    }
 
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5em;
+      color: #cc3366;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.4em;
+      color: #994466;
+      margin-bottom: 40px;
+    }
+
+    .message {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    .photo-slot {
+      width: 300px;
+      height: 300px;
+      border: 2px dashed #cc3366;
+      border-radius: 15px;
+      margin: 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-style: italic;
+      color: #cc3366;
+      background-color: #fff0f5;
+    }
+
+    .song-link {
+      display: inline-block;
+      margin-top: 30px;
+      font-size: 1.1em;
+      color: #ff4d6d;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .song-link:hover {
+      text-decoration: underline;
+    }
+
+    .floating-hearts {
+      position: fixed;
+      top: -50px;
+      font-size: 24px;
+      animation: fall 8s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-50px) translateX(0); }
+      100% { transform: translateY(100vh) translateX(50px); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Hearts -->
+  <script>
+    const heartCount = 25;
+    for (let i = 0; i < heartCount; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'floating-hearts';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      heart.innerHTML = '💗';
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <h1>for you, my love</h1>
+  <h2>a little something from the heart</h2>
+
+  <div class="message">
+    being with you is like breathing in sunlight — warm, sweet, and needed.  
+    <br><br>
+    you make my days brighter, my nights softer, and my heart fuller.  
+    even when the world is loud, you are my calm.  
+    <br><br>
+    thank you for existing so perfectly.  
+    here’s a little space for us.
+  </div>
+
+  <!-- Photo Placeholder -->
+  <div class="photo-slot">
+    your photo here 💞
+  </div>
+
+  <!-- Song Link -->
+  <a class="song-link" href="https://open.spotify.com/track/4kLLWzGtv3k2XLOuZQ3m8H" target="_blank">
+    ♪ Click to hear our song — “Until I Found You” by Stephen Sanchez
+  </a>
+
+</body>
+</html>
